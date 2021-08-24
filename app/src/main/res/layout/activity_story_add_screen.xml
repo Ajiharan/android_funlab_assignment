@@ -11,7 +11,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        android:textColor="@android:color/darker_gray"
+        android:textColor="@android:color/holo_blue_dark"
         android:textSize="24sp"
         android:fontFamily="casual"
         android:layout_marginTop="20dp"

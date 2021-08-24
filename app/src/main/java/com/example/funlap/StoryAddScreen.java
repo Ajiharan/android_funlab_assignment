@@ -3,6 +3,7 @@ package com.example.funlap;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -26,6 +27,7 @@ public class StoryAddScreen extends AppCompatActivity {
     private Button btnAddStory,btn_back;
     private FirebaseFirestore db;
     private AwesomeValidation awesomeValidation;
+    private ProgressDialog progressDialog;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,6 +38,7 @@ public class StoryAddScreen extends AppCompatActivity {
         txtAuthor=findViewById(R.id.story_author);
         txtDesc=findViewById(R.id.story_desc);
         btn_back=findViewById(R.id.btn_back);
+        progressDialog = new ProgressDialog(StoryAddScreen.this);
         awesomeValidation.addValidation(this,R.id.story_title,"[\\w\\W\\s]+",R.string.story_title);
         awesomeValidation.addValidation(this,R.id.story_author,"[\\w\\W\\s]+",R.string.story_author);
         awesomeValidation.addValidation(this,R.id.story_desc,"[\\w\\W\\s]+",R.string.story_desc);
@@ -61,6 +64,8 @@ public class StoryAddScreen extends AppCompatActivity {
     private void addData(){
         if (awesomeValidation.validate()) {
         btnAddStory.setEnabled(false);
+            progressDialog.setTitle("loading...");
+            progressDialog.show();
 
             Story story=new Story(txtTitle.getText().toString(),txtAuthor.getText().toString(),txtDesc.getText().toString());
 
@@ -71,31 +76,32 @@ public class StoryAddScreen extends AppCompatActivity {
                         .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                             @Override
                             public void onSuccess(DocumentReference documentReference) {
-                            btnAddStory.setEnabled(true);
-                                txtTitle.setText("");
-                                txtAuthor.setText("");
-                                txtDesc.setText("");
+                                resetData();
                                 Toast.makeText(StoryAddScreen.this,"Successfully added",Toast.LENGTH_SHORT).show();
                             }
                         })
                         .addOnFailureListener(new OnFailureListener() {
                             @Override
                             public void onFailure(@NonNull Exception e) {
-                            btnAddStory.setEnabled(true);
-                                txtTitle.setText("");
-                                txtAuthor.setText("");
-                                txtDesc.setText("");
+                                resetData();
                                 Toast.makeText(StoryAddScreen.this,e.getMessage(),Toast.LENGTH_SHORT).show();
                             }
                         });
             }catch (Exception e){
-                btnAddStory.setEnabled(true);
+                resetData();
                 System.out.println("error"+e.getMessage());
             }
 
 
 
         }
+    }
+    private void resetData(){
+        btnAddStory.setEnabled(true);
+        progressDialog.dismiss();
+        txtTitle.setText("");
+        txtAuthor.setText("");
+        txtDesc.setText("");
     }
 };
 
