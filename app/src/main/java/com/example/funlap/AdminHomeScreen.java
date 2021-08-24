@@ -17,7 +17,15 @@ public class AdminHomeScreen extends AppCompatActivity {
         storyBtn=findViewById(R.id.btn_story);
         poemBtn=findViewById(R.id.btn_poem);
         videoBtn=findViewById(R.id.btn_video);
-
+        funBtn=findViewById(R.id.btn_fun);
+        funBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(AdminHomeScreen.this,FunAddScreen.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                startActivity(intent);
+            }
+        });
         videoBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
