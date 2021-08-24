@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_for_intro_screen"
+    tools:context=".StoryAddScreen">
+    <TextView
+        android:id="@+id/txtStory"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="24sp"
+        android:fontFamily="casual"
+        android:layout_marginTop="20dp"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add story"
+        />
+    <Button
+        android:id="@+id/btn_back"
+      app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="70dp"
+        android:layout_height="31dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:layout_marginLeft="10dp"
+        android:textColor="@android:color/white"
+        android:background="@drawable/view_button"
+        android:layout_gravity="center"
+        android:text="back"
+        />
+    <View
+        android:id="@+id/view_top"
+        app:layout_constraintTop_toBottomOf="@+id/txtStory"
+        android:layout_width="match_parent"
+        android:background="@color/colorAccent"
+        android:layout_height="1dp"/>
+    <ScrollView
+        android:id="@+id/scroll_story"
+        app:layout_constraintTop_toBottomOf="@+id/view_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/top_con"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <com.google.android.material.textfield.TextInputLayout
+                android:elevation="8dp"
+                android:id="@+id/input_layer1"
+                android:layout_width="match_parent"
+                android:padding="4dp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/story_title"
+                    android:inputType="text"
+                    android:textColorHint="@color/colorPrimaryDark"
+                    android:padding="10dp"
+                    android:layout_marginRight="55dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="55dp"
+                    android:layout_width="match_parent"
+                    android:hint="StoryTitle"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:elevation="8dp"
+                android:id="@+id/input_layer2"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:padding="4dp"
+                app:layout_constraintTop_toBottomOf="@+id/input_layer1"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/story_author"
+                    android:inputType="text"
+                    android:textColorHint="@color/colorPrimaryDark"
+                    android:padding="10dp"
+                    android:layout_marginRight="55dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="55dp"
+                    android:layout_width="match_parent"
+                    android:hint="Story Author"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:elevation="8dp"
+                android:id="@+id/input_layer3"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:padding="4dp"
+                app:layout_constraintTop_toBottomOf="@+id/input_layer2"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/story_desc"
+                    android:inputType="textMultiLine"
+                    android:textColorHint="@color/colorPrimaryDark"
+                    android:padding="10dp"
+
+                    android:background="@drawable/edit_text_border"
+                    android:layout_marginRight="55dp"
+                    android:layout_marginTop="15dp"
+                    android:minLines="15"
+                    android:gravity="top"
+                    android:layout_marginLeft="55dp"
+                    android:layout_width="match_parent"
+                    android:hint="Story Description"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <Button
+                android:id="@+id/btnadd_story"
+                app:layout_constraintTop_toBottomOf="@+id/input_layer3"
+                android:layout_width="120dp"
+                android:layout_height="35dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginTop="12dp"
+                android:gravity="center"
+                android:layout_marginLeft="10dp"
+
+                android:textColor="@android:color/white"
+                android:background="@drawable/view_button"
+                android:layout_gravity="center"
+                android:text="Add Story"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
