@@ -47,7 +47,7 @@
         android:layout_height="1dp"/>
     <com.baoyz.swipemenulistview.SwipeMenuListView
         android:layout_marginTop="60dp"
-        android:id="@+id/view_alarm_details"
+        android:id="@+id/view_story_details"
         android:layout_width="match_parent"
         app:layout_constraintTop_toBottomOf="@+id/view_top"
         android:layout_height="match_parent">

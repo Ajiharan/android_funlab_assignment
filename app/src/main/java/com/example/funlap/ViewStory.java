@@ -36,7 +36,7 @@ public class ViewStory extends AppCompatActivity {
     private StoryListAdapter listAdapter;
     private FirebaseFirestore db ;
     private EditText txtStory_search;
-    private ListenerRegistration registration;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,8 +44,7 @@ public class ViewStory extends AppCompatActivity {
         txtStory_search=findViewById(R.id.txtStory_search);
         db = FirebaseFirestore.getInstance();
         backButton=findViewById(R.id.btn_back);
-        listViews = (SwipeMenuListView) findViewById(R.id.view_alarm_details);
-//        dataArrayList = new ArrayList<>();
+        listViews = (SwipeMenuListView) findViewById(R.id.view_story_details);
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
