@@ -63,7 +63,6 @@ public class FunAddScreen extends AppCompatActivity {
             Fun fun=new Fun(fun_title.getText().toString(),fun_category.getText().toString(),fun_desc.getText().toString());
 
             try{
-
                 db.collection("funs")
                         .add(fun.setFun())
                         .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {

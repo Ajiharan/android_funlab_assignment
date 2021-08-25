@@ -9,7 +9,7 @@ public class Story {
     private String desc;
     private String id;
 
-    public Story(String title, String author, String desc, String id) {
+    public Story(String id,String title, String author, String desc) {
         this.title = title;
         this.author = author;
         this.desc = desc;

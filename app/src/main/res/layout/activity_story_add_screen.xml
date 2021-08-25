@@ -42,10 +42,12 @@
         android:background="@color/colorAccent"
         android:layout_height="1dp"/>
     <ScrollView
+        android:layout_marginTop="60dp"
         android:id="@+id/scroll_story"
         app:layout_constraintTop_toBottomOf="@+id/view_top"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:orientation="vertical"
+        android:layout_height="match_parent">
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/top_con"
             android:layout_width="match_parent"
@@ -107,7 +109,7 @@
                     android:inputType="textMultiLine"
                     android:textColorHint="@color/colorPrimaryDark"
                     android:padding="10dp"
-
+                    android:isScrollContainer="true"
                     android:background="@drawable/edit_text_border"
                     android:layout_marginRight="55dp"
                     android:layout_marginTop="15dp"
@@ -128,8 +130,8 @@
                 app:layout_constraintLeft_toLeftOf="parent"
                 android:layout_marginTop="12dp"
                 android:gravity="center"
-                android:layout_marginLeft="10dp"
 
+                android:layout_margin="20dp"
                 android:textColor="@android:color/white"
                 android:background="@drawable/view_button"
                 android:layout_gravity="center"

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
 
     android:layout_height="match_parent"
-    tools:context=".AdminHomeScreen">
+    tools:context=".UserHomeScreen">
     <ScrollView
         android:layout_marginTop="10dp"
         android:id="@+id/scroll"
@@ -29,8 +29,8 @@
                     />
 
                 <Button
-                    android:id="@+id/btn_story"
-                    android:layout_width="100dp"
+                    android:id="@+id/btn_view_story"
+                    android:layout_width="120dp"
                     android:layout_height="30dp"
                     android:textSize="11sp"
                     android:gravity="center"
@@ -38,7 +38,7 @@
                     android:textColor="@android:color/white"
                     android:background="@drawable/button_background"
                     android:layout_gravity="center"
-                    android:text="Stories"
+                    android:text="View Stories"
                     />
 
             </LinearLayout>
@@ -56,14 +56,14 @@
                     />
 
                 <Button
-                    android:id="@+id/btn_poem"
-                    android:layout_width="100dp"
+                    android:id="@+id/btn_view_poem"
+                    android:layout_width="120dp"
                     android:layout_height="30dp"
                     android:textSize="11sp"
                     android:gravity="center"
                     android:layout_marginLeft="10dp"
                     android:layout_gravity="center"
-                    android:text="Poems"
+                    android:text="View poems"
                     android:textColor="@android:color/white"
                     android:background="@drawable/button_background"
                     />
@@ -83,8 +83,8 @@
                     />
 
                 <Button
-                    android:id="@+id/btn_video"
-                    android:layout_width="100dp"
+                    android:id="@+id/btn_view_video"
+                    android:layout_width="120dp"
                     android:layout_height="30dp"
                     android:textSize="11sp"
                     android:gravity="center"
@@ -92,7 +92,7 @@
                     android:layout_gravity="center"
                     android:textColor="@android:color/white"
                     android:background="@drawable/button_background"
-                    android:text="Videos"
+                    android:text="View videos"
 
                     />
 
@@ -111,14 +111,14 @@
                     />
 
                 <Button
-                    android:id="@+id/btn_fun"
-                    android:layout_width="100dp"
+                    android:id="@+id/btn_view_fun"
+                    android:layout_width="120dp"
                     android:layout_height="30dp"
                     android:textSize="11sp"
                     android:gravity="center"
                     android:layout_marginLeft="10dp"
                     android:layout_gravity="center"
-                    android:text="Fun"
+                    android:text="View fun"
                     android:textColor="@android:color/white"
                     android:background="@drawable/button_background"
                     />
