@@ -28,7 +28,9 @@ public class UserHomeScreen extends AppCompatActivity {
         btn_view_video.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent=new Intent(UserHomeScreen.this,ViewVideo.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                startActivity(intent);
             }
         });
         btn_view_poem.setOnClickListener(new View.OnClickListener() {

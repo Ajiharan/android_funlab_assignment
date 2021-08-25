@@ -89,7 +89,7 @@ public class ViewFun extends AppCompatActivity {
 
     private void getSearchData(String res){
 
-        db.collection("funs").whereEqualTo("poemTitle",res)
+        db.collection("funs").whereEqualTo("funCategory",res)
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                     @Override
