@@ -6,27 +6,70 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/btn_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="264dp"
-
-        android:text="View"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/btn_homeScreen"
+    <TextView
+        android:id="@+id/txt_hea"
+        android:layout_width="match_parent"
+        android:text="Login User"
+        android:textSize="20sp"
+        android:gravity="center"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="200dp"
+        android:layout_height="wrap_content"/>
+    <com.google.android.material.textfield.TextInputLayout
+        android:elevation="8dp"
+        android:id="@+id/input_layer1"
+        android:layout_width="match_parent"
+        android:padding="4dp"
+        app:layout_constraintTop_toBottomOf="@+id/txt_hea"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content">
+    <EditText
+        android:id="@+id/email_address"
+        android:inputType="text"
+        android:textColorHint="@color/colorPrimaryDark"
+        android:padding="10dp"
+        android:layout_marginRight="55dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="55dp"
+        android:layout_width="match_parent"
+        android:hint="Email Address"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:elevation="8dp"
+        android:id="@+id/input_layer2"
+        android:layout_width="match_parent"
+        android:padding="4dp"
+        app:layout_constraintTop_toBottomOf="@+id/input_layer1"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/password"
+
+            android:inputType="textPassword"
+            android:textColorHint="@color/colorPrimaryDark"
+            android:padding="10dp"
+            android:layout_marginRight="55dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="55dp"
+            android:layout_width="match_parent"
+            android:hint="Password"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <Button
+        android:id="@+id/btn_login"
+        app:layout_constraintTop_toBottomOf="@+id/input_layer2"
+        android:layout_width="100dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Add"
-        tools:layout_editor_absoluteX="149dp"
-        tools:layout_editor_absoluteY="341dp" />
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="25dp"
+        android:textColor="@android:color/white"
+        android:textSize="13sp"
+        android:background="@drawable/button_background"
+        android:text="Login User"
+        android:layout_height="28dp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
