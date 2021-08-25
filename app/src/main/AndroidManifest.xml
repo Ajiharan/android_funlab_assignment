@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Funlap">
-        <activity android:name=".ViewPoem"></activity>
+        <activity android:name=".ViewFun"></activity>
+        <activity android:name=".ViewPoem" />
         <activity android:name=".UserHomeScreen" />
         <activity android:name=".ViewStory" />
         <activity android:name=".FunAddScreen" />
